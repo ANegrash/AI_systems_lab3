@@ -57,7 +57,7 @@ def split_info_att(df_splitted: list) -> float:
 
 
 def build_tree(tree_node: dict, df_subset: pd.DataFrame, level: int):
-    if (level >= TREE_DEPTH):
+    if level >= TREE_DEPTH:
         return
 
     tree_node["entropy"] = info_t(df_subset[Y_COLUMN].to_numpy())
